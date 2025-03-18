@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 84.2% 60.2%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 49 89% 55%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 84.2% 60.2%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 84.2% 60.2%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 84.2% 60.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Iowa Summer Jam Colors */
+:root {
+  --iowa-red: #d53f46;
+  --iowa-yellow: #e6d12d;
+  --iowa-black: #232127;
+  --iowa-white: #fbfbfb;
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('https://ext.same-assets.com/2680540046/2563320011.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('https://ext.same-assets.com/3367532724/3350623103.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://ext.same-assets.com/3020379050/1388315313.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://ext.same-assets.com/349365422/1411677578.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://ext.same-assets.com/323179405/3481533639.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-iowa {
+  background-color: var(--iowa-red);
+  color: var(--iowa-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+}
+
+.btn-iowa:hover {
+  background-color: var(--iowa-black);
+}
+
+.yellow-bg {
+  background-color: var(--iowa-yellow);
+}
+
+.red-bg {
+  background-color: var(--iowa-red);
+}
+
+.black-bg {
+  background-color: var(--iowa-black);
+}
+
+.white-bg {
+  background-color: var(--iowa-white);
+}
+
+.countdown-timer {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.artist-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: scale(1.05);
+}
+
+.artist-card-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.event-date {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tilted-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.tilted-section:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--iowa-white);
+  transform: skewY(-4deg);
+  transform-origin: bottom right;
+}
